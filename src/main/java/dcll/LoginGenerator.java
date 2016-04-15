@@ -23,7 +23,7 @@ public class LoginGenerator {
 
     /**
      * Genere un login unique a partir d'un nom et d'un prenom en prenant
-     * la premiere lettre du prenom, concatenee avec.
+     * la premiere lettre du prenom, concatenee avec
      * les 3 premieres lettres du nom, le tout mis en lettres capitales et
      * desaccentue. Le login genere doit etre unique
      * par rapport a la liste des logins existants. En cas de doublon,
