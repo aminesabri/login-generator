@@ -47,4 +47,31 @@ public class LoginGeneratorTest {
         assertNotEquals("PDUR4", usernamePaulDURAN);
 
     }
+
+    @Test
+    public void testGenerateLoginForNomAndPrenom3() throws Exception {
+        LoginService loginService = new LoginService(
+                new String[] {"JROL", "BPER", "CGUR", "JDUP", "JRAL", "JRAL1"});
+
+        LoginGenerator loginGenerator = new LoginGenerator(loginService);
+
+        String usernamePaulDURAN = loginGenerator.generateLoginForNomAndPrenom("Du", "Paul");
+        assertEquals("PDU", usernamePaulDURAN);
+        assertNotEquals("PDUR", usernamePaulDURAN);
+
+    }
+/*
+    @Test
+    public void testGenerateLoginForNomAndPrenom4() throws Exception {
+        LoginService loginService = new LoginService(
+                new String[] {"JROL", "BPER", "CGUR", "JDUP", "JRAL", "JRAL1"});
+
+        LoginGenerator loginGenerator = new LoginGenerator(loginService);
+
+        String usernamePaulDURAN = loginGenerator.generateLoginForNomAndPrenom("Ralling", "John");
+        assertEquals("JRAL2", usernamePaulDURAN);
+        assertNotEquals("PDUR4", usernamePaulDURAN);
+
+    }
+*/
 }
